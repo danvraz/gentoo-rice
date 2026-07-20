@@ -15,15 +15,6 @@ A minimal monochrome Hyprland rice built on Gentoo Linux.
 - Hyprpaper
 - Thunar
 
-## Screenshots
-
-### Desktop
-
-![Desktop](screenshots/desktop.png)
-
-### Launcher
-
-![Launcher](screenshots/launcher.png)
 
 ## Wallpaper
 
