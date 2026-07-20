@@ -1,0 +1,21 @@
+# Backup files
+*.bak
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# Cache
+.cache/
+
+# Temporary files
+*.tmp
