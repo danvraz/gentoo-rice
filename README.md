@@ -1,17 +1,16 @@
-# Datum
+# DG01
 
 A minimal monochrome Hyprland rice for Gentoo Linux.
 
-> My personal daily-driver configuration focused on simplicity, performance, and software engineering.
+> Monochrome simple daily-driver configuration 
 
-## Screenshots
+## Video
 
 
-<img width="1599" height="899" alt="WhatsApp Image 2026-07-20 at 23 46 09" src="https://github.com/user-attachments/assets/2ee80d59-ab48-4251-99fc-b111d692c373" />
-<img width="1599" height="899" alt="WhatsApp Image 2026-07-20 at 23 46 09 (1)" src="https://github.com/user-attachments/assets/24a661f5-b875-4db5-9b08-09f8dbce7221" />
-<img width="1599" height="899" alt="WhatsApp Image 2026-07-20 at 23 46 09 (2)" src="https://github.com/user-attachments/assets/1e58d9b8-264b-4b9f-9dbc-ca8beb04f2ff" />
-<img width="1599" height="899" alt="WhatsApp Image 2026-07-20 at 23 46 09 (3)" src="https://github.com/user-attachments/assets/e63db218-a87e-4c1a-90de-c022359adc28" />
-<img width="1599" height="899" alt="WhatsApp Image 2026-07-20 at 23 46 10" src="https://github.com/user-attachments/assets/0516224b-245d-431d-a982-3e495b174223" />
+
+https://github.com/user-attachments/assets/8cb41437-cd41-4a99-b689-45c00ae0dce5
+
+
 
 
 ## Features
@@ -98,6 +97,17 @@ Hyprland --config ~/.config/hypr/hyprland.lua
 ```
 
 `Super+P` opens the Wofi power menu, `Super+Print` takes a selected-area screenshot, and `Super+Shift+R` toggles screen recording. Hyprpaper uses the shipped wallpaper as a fallback for every output, and its path uses `$HOME` rather than a username-specific directory.
+
+## Credits & Inspiration
+
+This rice makes use of and draws inspiration from a few great open-source projects:
+
+- [**VinZ**](https://github.com/vinz-ux/VinZ) — A terminal graphics engine by [@vinz-ux](https://github.com/vinz-ux), which I use as part of my setup.
+- [**fetch**](https://github.com/areofyl/fetch) — A 3D system information fetch tool by [@areofyl](https://github.com/areofyl), used in my terminal setup.
+- [**flow**](https://github.com/programmersd21/flow) — A terminal application I use as part of my workflow.
+- [**diinki-retrofuture**](https://github.com/diinki/diinki-retrofuture) — I took inspiration from [@diinki](https://github.com/diinki)'s Waybar configuration while developing my own.
+
+Huge thanks to the developers of these projects for making and sharing their work.
 
 ## License
 
