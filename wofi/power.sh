@@ -1,6 +1,6 @@
 #!/bin/bash
 
-choice=$(printf "⏻ Shutdown\n↻ Reboot\n🔒 Lock\n⇦ Logout" | \
+choice=$(printf "⏻ Shutdown\n↻ Reboot\n⇦ Logout" | \
 wofi --dmenu \
      --prompt "Power" \
      --style ~/.config/wofi/power.css \
@@ -13,9 +13,6 @@ case "$choice" in
         ;;
     "↻ Reboot")
         systemctl reboot
-        ;;
-    "🔒 Lock")
-        pidof hyprlock >/dev/null || hyprlock
         ;;
     "⇦ Logout")
         hyprctl dispatch exit

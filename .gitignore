@@ -19,3 +19,23 @@ Thumbs.db
 
 # Temporary files
 *.tmp
+*.pid
+
+# Credentials and private key material
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+id_ed25519
+id_rsa
+*.age
+
+# Shell history and generated application state
+.bash_history
+.zsh_history
+*.sqlite
+*.sqlite3
