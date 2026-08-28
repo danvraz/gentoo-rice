@@ -14,7 +14,6 @@ local apps = {
     terminal    = "kitty",
     launcher    = "wofi --show drun",
     filemanager = "kitty -e yazi",
-    lock        = "hyprlock",
     wallpaper   = "hyprpaper",
     bar         = "waybar",
     notify      = "dunst",
@@ -82,7 +81,7 @@ general = {
 
     gaps_in = 3,
 
-    gaps_out = 6,
+    gaps_out = 0,
 
     border_size = 2,
 
@@ -124,9 +123,9 @@ decoration = {
 
     rounding_power = 2,
 
-    active_opacity = 0.77,
+    active_opacity = 1.0,
 
-    inactive_opacity = 0.70,
+    inactive_opacity = 1.0,
 
     fullscreen_opacity = 1.0,
 
@@ -461,22 +460,6 @@ hl.dsp.window.fullscreen({
 action="toggle"
 
 })
-
-)
-
-hl.bind(
-
-mainMod .. " + L",
-
-hl.dsp.exec_cmd(apps.lock)
-
-)
-
-hl.bind(
-
-mainMod .. " + P",
-
-hl.dsp.exec_cmd("wlogout")
 
 )
 

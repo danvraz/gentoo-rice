@@ -1,8 +1,8 @@
 # Datum
 
-A minimal monochrome Hyprland rice built on Gentoo Linux.
+A minimal monochrome Hyprland rice for Gentoo Linux.
 
-> My personal daily-driver configuration focused on simplicity, performance and software engineering.
+> My personal daily-driver configuration focused on simplicity, performance, and software engineering.
 
 ## Screenshots
 
@@ -24,26 +24,25 @@ A minimal monochrome Hyprland rice built on Gentoo Linux.
 - Dunst
 - Hyprpaper
 - Thunar
+- Yazi
+- Starship
+- Screenshot and screen-recording helpers
 
 
-## Wallpaper
+## Dependencies
 
-The wallpaper is included in this repository:
+Core desktop packages:
 
-```
-wallpapers/3.png
-```
+- `gui-wm/hyprland`, `gui-apps/hyprpaper`, `gui-apps/waybar`, `gui-apps/wofi`
+- `x11-terms/kitty`, `x11-misc/dunst`, `xfce-base/thunar`, `app-misc/yazi`
+- `app-shells/starship`, `gnome-extra/polkit-gnome`, `x11-themes/bibata-xcursors`
 
-My personal configuration references:
+Media and utility packages:
 
-```
-/home/dan/wallpapers/3.png
-```
+- `gui-apps/grim`, `gui-apps/slurp`, `gui-apps/wl-clipboard`, `gui-apps/wf-recorder`
+- `media-video/pipewire`, `media-video/wireplumber`, and `media-sound/pavucontrol`
 
-If you're using these dotfiles, either:
-
-- place the wallpaper at the same location, or
-- edit `hypr/hyprpaper.conf` to point to your wallpaper directory.
+The screenshot helper needs `libnotify` for `notify-send`; the recording helper uses `pactl` to select the default PipeWire sink monitor.
 
 ## Fonts
 
@@ -51,15 +50,27 @@ If you're using these dotfiles, either:
 
 ## Installation
 
-Copy the configuration directories into your `~/.config` directory.
+Copy the configuration directories into `~/.config`, including the wallpaper shipped at `hypr/wallpapers/3.png`:
 
 ```bash
-cp -r hypr ~/.config/
-cp -r waybar ~/.config/
-cp -r wofi ~/.config/
-cp -r kitty ~/.config/
-cp -r dunst ~/.config/
+cp -r hypr waybar wofi kitty dunst yazi ~/.config/
+cp starship.toml ~/.config/starship.toml
+install -Dm755 bin/screenshot bin/record-screen -t ~/.local/bin/
 ```
+
+Ensure `~/.local/bin` is on your `PATH`, then add the following to your interactive Bash configuration if you use Bash:
+
+```bash
+eval "$(starship init bash)"
+```
+
+This rice uses Hyprland's Lua configuration. Start it with:
+
+```bash
+Hyprland --config ~/.config/hypr/hyprland.lua
+```
+
+`Super+P` opens the Wofi power menu, `Super+Print` takes a selected-area screenshot, and `Super+Shift+R` toggles screen recording. Hyprpaper uses the shipped wallpaper as a fallback for every output, and its path uses `$HOME` rather than a username-specific directory.
 
 ## License
 

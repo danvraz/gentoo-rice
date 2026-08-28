@@ -1,0 +1,22 @@
+#!/bin/bash
+
+PIDFILE="/tmp/wf-recorder.pid"
+OUTDIR="$HOME/Videos"
+
+mkdir -p "$OUTDIR"
+
+if [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE")" 2>/dev/null; then
+    kill -INT "$(cat "$PIDFILE")"
+    rm -f "$PIDFILE"
+    notify-send "Screen Recording" "Recording saved to ~/Videos"
+    exit 0
+fi
+
+FILE="$OUTDIR/Recording-$(date +%Y-%m-%d_%H-%M-%S).mp4"
+
+wf-recorder \
+    --audio="$(pactl get-default-sink).monitor" \
+    -f "$FILE" &
+echo $! > "$PIDFILE"
+
+notify-send "Screen Recording" "Recording started"

@@ -1,0 +1,124 @@
+# ~/.config/yazi/theme.toml
+
+[app]
+overall = { fg = "#d0d0d0", bg = "#0a0a0a" }
+
+[mgr]
+cwd = { fg = "#d0d0d0" }
+
+hovered = { fg = "#ffffff", bg = "#303030" }
+preview_hovered = { underline = true }
+
+find_keyword = { fg = "#ffffff", bold = true }
+find_position = { fg = "#aaaaaa", bold = true }
+
+marker_copied = { fg = "#ffffff", bg = "#555555" }
+marker_cut = { fg = "#ffffff", bg = "#555555" }
+marker_marked = { fg = "#ffffff", bg = "#444444" }
+marker_selected = { fg = "#ffffff", bg = "#333333" }
+
+count_copied = { fg = "#ffffff", bg = "#555555" }
+count_cut = { fg = "#ffffff", bg = "#555555" }
+count_selected = { fg = "#ffffff", bg = "#333333" }
+
+border_symbol = "│"
+border_style = { fg = "#404040" }
+
+[tab]
+active = { fg = "#ffffff", bg = "#303030" }
+inactive = { fg = "#777777", bg = "#151515" }
+
+[mode]
+normal_main = { fg = "#ffffff", bg = "#303030", bold = true }
+normal_alt = { fg = "#999999", bg = "#151515" }
+
+select_main = { fg = "#ffffff", bg = "#444444", bold = true }
+select_alt = { fg = "#999999", bg = "#151515" }
+
+unset_main = { fg = "#ffffff", bg = "#555555", bold = true }
+unset_alt = { fg = "#999999", bg = "#151515" }
+
+[status]
+overall = { fg = "#aaaaaa", bg = "#151515" }
+
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+progress_label = { fg = "#ffffff", bold = true }
+progress_normal = { fg = "#aaaaaa", bg = "#303030" }
+progress_error = { fg = "#ffffff", bg = "#555555" }
+
+[input]
+border = { fg = "#555555" }
+title = { fg = "#ffffff" }
+value = { fg = "#cccccc" }
+selected = { reversed = true }
+
+[select]
+border = { fg = "#555555" }
+active = { fg = "#ffffff", bg = "#303030" }
+inactive = { fg = "#777777" }
+
+[completion]
+border = { fg = "#555555" }
+active = { fg = "#ffffff", bg = "#303030" }
+inactive = { fg = "#888888" }
+
+[which]
+mask = { bg = "#0a0a0a" }
+cand = { fg = "#ffffff" }
+rest = { fg = "#666666" }
+desc = { fg = "#999999" }
+separator = "  "
+separator_style = { fg = "#444444" }
+
+[help]
+on = { fg = "#ffffff" }
+run = { fg = "#cccccc" }
+desc = { fg = "#888888" }
+hovered = { reversed = true }
+footer = { fg = "#888888", bg = "#151515" }
+
+[notify]
+title_info = { fg = "#ffffff" }
+title_warn = { fg = "#cccccc" }
+title_error = { fg = "#ffffff" }
+
+[filetype]
+rules = [
+    { mime = "image/*", fg = "#bbbbbb" },
+    { mime = "video/*", fg = "#bbbbbb" },
+    { mime = "audio/*", fg = "#bbbbbb" },
+    { mime = "application/pdf", fg = "#bbbbbb" },
+    { mime = "application/zip", fg = "#999999" },
+    { mime = "application/x-tar", fg = "#999999" },
+    { mime = "application/x-7z-compressed", fg = "#999999" },
+    { mime = "application/x-rar", fg = "#999999" },
+
+    { url = "*/", fg = "#ffffff" },
+
+    { is = "exec", fg = "#cccccc" },
+    { is = "orphan", fg = "#888888" },
+    { is = "link", fg = "#aaaaaa" },
+
+    { name = "*", fg = "#cccccc" },
+]
+
+[icon]
+dirs = [
+    { name = "*", text = "", fg = "#d0d0d0" },
+]
+
+files = [
+    { name = "*", text = "󰈙", fg = "#aaaaaa" },
+]
+
+exts = [
+    { name = "*", text = "󰈙", fg = "#aaaaaa" },
+]
+
+conds = [
+    { if = "dir", text = "", fg = "#d0d0d0" },
+    { if = "link", text = "󰌷", fg = "#888888" },
+    { if = "exec", text = "󰆍", fg = "#bbbbbb" },
+]

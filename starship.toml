@@ -1,0 +1,15 @@
+format = "$directory$git_branch\n$character"
+
+[directory]
+style = "bold #B0B0B0"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+symbol = " "
+style = "#808080"
+format = "[$symbol$branch]($style)"
+
+[character]
+success_symbol = "[❯](#808080)"
+error_symbol = "[❯](#808080)"
