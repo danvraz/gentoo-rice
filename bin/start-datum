@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -eu
+
+config_home=${XDG_CONFIG_HOME:-"$HOME/.config"}
+
+exec Hyprland --config "$config_home/hypr/hyprland.lua"

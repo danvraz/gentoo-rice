@@ -1,0 +1,25 @@
+# Required desktop components
+gui-wm/hyprland
+gui-apps/hyprpaper
+gui-apps/waybar
+gui-apps/wofi
+x11-terms/kitty
+x11-misc/dunst
+xfce-base/thunar
+app-misc/yazi
+app-shells/starship
+gnome-extra/polkit-gnome
+x11-themes/bibata-xcursors
+
+# Screenshots, recording, audio, and Waybar modules
+gui-apps/grim
+gui-apps/slurp
+gui-apps/wl-clipboard
+gui-apps/wf-recorder
+media-video/pipewire
+media-video/wireplumber
+media-libs/libpulse
+media-sound/pavucontrol
+net-misc/networkmanager
+sys-power/brightnessctl
+x11-libs/libnotify

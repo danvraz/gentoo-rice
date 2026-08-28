@@ -36,11 +36,13 @@ Core desktop packages:
 - `gui-wm/hyprland`, `gui-apps/hyprpaper`, `gui-apps/waybar`, `gui-apps/wofi`
 - `x11-terms/kitty`, `x11-misc/dunst`, `xfce-base/thunar`, `app-misc/yazi`
 - `app-shells/starship`, `gnome-extra/polkit-gnome`, `x11-themes/bibata-xcursors`
+- `sys-power/brightnessctl`
 
 Media and utility packages:
 
 - `gui-apps/grim`, `gui-apps/slurp`, `gui-apps/wl-clipboard`, `gui-apps/wf-recorder`
-- `media-video/pipewire`, `media-video/wireplumber`, and `media-sound/pavucontrol`
+- `media-video/pipewire`, `media-video/wireplumber`, `media-libs/libpulse`, and `media-sound/pavucontrol`
+- `x11-libs/libnotify` and `net-misc/networkmanager`
 
 The screenshot helper needs `libnotify` for `notify-send`; the recording helper uses `pactl` to select the default PipeWire sink monitor.
 
@@ -50,12 +52,37 @@ The screenshot helper needs `libnotify` for `notify-send`; the recording helper 
 
 ## Installation
 
+### Quick start
+
+On a new Gentoo user account, clone the repository and run the installer:
+
+```bash
+git clone https://github.com/danvraz/gentoo-rice.git
+cd gentoo-rice
+./install.sh --install-packages
+~/.local/bin/start-datum
+```
+
+If the packages are already installed, use `./install.sh` instead. The installer refuses to overwrite existing configuration. To move conflicts into `~/.local/share/datum-backups/` first, use `./install.sh --backup-existing`.
+
+To install the documented Gentoo package set as part of setup, run:
+
+```bash
+./install.sh --install-packages
+```
+
+It uses the complete `packages/gentoo-packages.txt` manifest with `emerge --ask --getbinpkg=y`, so Portage still shows the exact package plan and asks before changing the system. A five-minute install depends on a configured binary package source; compiling Hyprland and its dependencies from source will take longer.
+
+Datum expects a systemd-based session because its power menu uses `systemctl`. Install a JetBrainsMono Nerd Font (or another Nerd Font) for the intended icons.
+
+### Manual installation
+
 Copy the configuration directories into `~/.config`, including the wallpaper shipped at `hypr/wallpapers/3.png`:
 
 ```bash
 cp -r hypr waybar wofi kitty dunst yazi ~/.config/
 cp starship.toml ~/.config/starship.toml
-install -Dm755 bin/screenshot bin/record-screen -t ~/.local/bin/
+install -Dm755 bin/screenshot bin/record-screen bin/start-datum -t ~/.local/bin/
 ```
 
 Ensure `~/.local/bin` is on your `PATH`, then add the following to your interactive Bash configuration if you use Bash:
