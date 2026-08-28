@@ -1,4 +1,4 @@
-# DG01
+# DATUM DG01
 
 A minimal monochrome Hyprland rice for Gentoo Linux.
 
