@@ -7,10 +7,7 @@ A minimal monochrome Hyprland rice for Gentoo Linux.
 ## Video
 
 
-
-https://github.com/user-attachments/assets/8cb41437-cd41-4a99-b689-45c00ae0dce5
-
-
+https://github.com/user-attachments/assets/e5e3d675-07ad-483b-b6fd-7469da521dce
 
 
 ## Features
