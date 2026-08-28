@@ -5,7 +5,7 @@ wofi --dmenu \
      --prompt "Power" \
      --style ~/.config/wofi/power.css \
      --width 320 \
-     --height 260)
+     --height 210)
 
 case "$choice" in
     "⏻ Shutdown")
